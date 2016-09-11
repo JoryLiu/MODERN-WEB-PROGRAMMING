@@ -3,7 +3,7 @@ h1, h2 {
 	background-color: rgb(240, 240, 240);
 	text-decoration: underline;
 	font-family: Century Gothic, Futura, Verdana, sans-serif;
-	/*宽标题*/
+	/*Wide headings*/
 	letter-spacing: 0.2em;
 }
 h1 {
@@ -30,14 +30,14 @@ ul {
 	list-style-image: url(http://courses.cs.washington.edu/courses/cse190m/09sp/homework/1/pie_icon.gif); 
 }
 body {
-	/*设置背景*/
+	/*set background*/
 	background-image: url(http://courses.cs.washington.edu/courses/cse190m/09sp/homework/1/silverware.jpg);
-	/*两个方向重复*/
+	/*repeat in both directions*/
 	background-repeat: repeat;
-	/*不随页面滚动*/
+	/*not move when the page is scrolled*/
 	background-attachment: fixed;
 }
 img {
-	/*无边界图像链接*/
+	/*Borderless image links*/
 	border: none;
 }
