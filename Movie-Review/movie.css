@@ -84,6 +84,8 @@ h1 {
 }
 .author .icon {
 	margin-bottom: 3em;
+	margin-left: 5px;
+	margin-right: 5px;
 }
 dl {
 	margin-left: 10px;
