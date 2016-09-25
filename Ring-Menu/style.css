@@ -1,0 +1,151 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    font-weight: bold;
+    font-family: "Arial", "Microsoft YaHei", sans-serif;
+}
+.icon {
+    background-image: url(assets/images/atplus_white.png);
+    background-repeat: no-repeat;
+    background-color: #989ed1;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-position: center;
+    transition: all 0.5s ease-in-out 1.2s;
+    position: absolute;
+    left: 620px;
+    top: 450px;
+}
+ul {
+    list-style-type: none;
+    font-size: 20px;
+    padding: 0px;
+    text-align: center;
+}
+.info {
+    background-color: #7e7e7e;
+    border-radius: 50%;
+    color: #00e89c;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out 0.7s;
+    opacity: 0;
+    position: absolute;
+    left: 620px;
+    top: 450px;
+    width: 35px;
+    height: 35px;
+}
+li.mine {
+    display: inline;
+}
+span.unread {
+    color: white;
+    background-color: red;
+    border-radius: 50%;
+    float: right;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    font-size: 15px;
+    line-height: 21px;
+}
+#control-ring li {
+    background-color: #7e7e7e;
+    border-radius: 50%;
+    position: absolute;
+    left: 620px;
+    top: 450px;
+    width: 35px;
+    height: 35px;
+}
+.mask, .history, .message, .setting, .sign{
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all 0.5s ease-in-out 0.7s;
+    opacity: 0;
+}
+.mask {
+    background-image: url(assets/images/mask.png);
+}
+.history {
+    background-image: url(assets/images/history.png);
+}
+.message {
+    background-image: url(assets/images/message.png);
+}
+.setting {
+    background-image: url(assets/images/setting.png);
+}
+.sign {
+    background-image: url(assets/images/signin.png);
+}
+.info li {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.comment span {
+    font-size: 30px;
+    color: white;
+}
+.user span {
+    color: white;
+}
+.info span {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.info img {
+    vertical-align: middle;
+}
+#button:hover .icon {
+    width: 75px;
+    height: 75px;
+    background-image: url(assets/images/atplus_green.png);
+    background-color: rgba(48, 63, 159, 1);
+    transition: all 0.5s ease-in-out 0s;
+}
+#button:hover .info {
+    opacity: 1;
+    transition: all 0.5s ease-in-out 0s;
+    position: absolute;
+    top: 275px;
+    left: 585px;
+    width: 150px;
+    height: 150px;
+}
+#button:hover .mask {
+    opacity: 1;
+    transition: all 0.5s ease-in-out 0s;
+    position: absolute;
+    left: 550px;
+    top: 405px;
+}
+#button:hover .history {
+    opacity: 1;
+    transition: all 0.5s ease-in-out 0s;
+    left: 530px;
+    top: 470px;
+}
+#button:hover .message {
+    opacity: 1;
+    transition: all 0.5s ease-in-out 0s;
+    left: 560px;
+    top: 530px;
+}
+#button:hover .setting {
+    opacity: 1;
+    transition: all 0.5s ease-in-out 0s;
+    left: 635px;
+    top: 555px;
+}
+#button:hover .sign {
+    opacity: 1;
+    transition: all 0.5s ease-in-out 0s;
+    left: 710px;
+    top: 530px;
+}
+#button:hover #control-ring > li {
+    width: 50px;
+    height: 50px;
+}
