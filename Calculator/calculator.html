@@ -3,37 +3,38 @@
 	<head>
 		<meta http-equiv = "Content-Type" content = "text/html; charset=utf-8" />
         <link rel="stylesheet" type="text/css" href="calculator.css" media="screen" />
-        <script src= "calculator" type="text/javascript"></script>
+        <script src= "calculator.js" type="text/javascript"></script>
         <title> Calculator </title>
 	</head>
 	<body>
-		<h1>简单计算器</h1>
 		<div id="UI">
 			<div id="calculator">
 				<div id="screen">
-					<input type="text" name="displayInput" disabled="disabled">
-					<input type="text" name="displayOutput" disabled="disabled">
+					<input type="text" id="display" disabled="disabled" maxlength="55">
 				</div>
-				<div id="button">
-					<input type="button" name="clear" value="C">
-					<input type="button" name="sign" value="±">
-					<input type="button" name="percent" value="%">
-					<input type="button" name="division" value="÷">
-					<input type="button" name="num7" value="7">
-					<input type="button" name="num8" value="8">
-					<input type="button" name="num9" value="9">
-					<input type="button" name="product" value="×">
-					<input type="button" name="num4" value="4">
-					<input type="button" name="num5" value="5">
-					<input type="button" name="num6" value="6">
-					<input type="button" name="subtraction" value="-">
-					<input type="button" name="num1" value="1">
-					<input type="button" name="num2" value="2">
-					<input type="button" name="num3" value="3">
-					<input type="button" name="addition" value="+">
-					<input type="button" name="num0" value="0" id="zero">
-					<input type="button" name="decimal" value=".">
-					<input type="button" name="equality" value="=">
+				<div id="keyboard">
+					<ul>
+						<li><input type="button" id="clearError" value="CE" class="oxfordGray"></li>
+						<li><input type="button" id="leftBracket" value="(" class="oxfordGray normal"></li> <!--The character which can be directly added to the end of the string--> 
+						<li><input type="button" id="rightBracket" value=")" class="oxfordGray normal"></li>
+						<li><input type="button" id="division" value="÷" class="orange normal"></li>
+						<li><input type="button" id="num7" value="7" class="lightGray normal"></li>
+						<li><input type="button" id="num8" value="8" class="lightGray normal"></li>
+						<li><input type="button" id="num9" value="9" class="lightGray normal"></li>
+						<li><input type="button" id="product" value="×" class="orange normal"></li>
+						<li><input type="button" id="num4" value="4" class="lightGray normal"></li>
+						<li><input type="button" id="num5" value="5" class="lightGray normal"></li>
+						<li><input type="button" id="num6" value="6" class="lightGray normal"></li>
+						<li><input type="button" id="subtraction" value="-" class="orange normal"></li>
+						<li><input type="button" id="num1" value="1" class="lightGray normal"></li>
+						<li><input type="button" id="num2" value="2" class="lightGray normal"></li>
+						<li><input type="button" id="num3" value="3" class="lightGray normal"></li>
+						<li><input type="button" id="addition" value="+" class="orange normal"></li>
+						<li><input type="button" id="num0" value="0" class="lightGray normal"></li>
+						<li><input type="button" id="decimal" value="." class="lightGray"></li>
+						<li><input type="button" id="backspace" value="←" class="lightGray"></li>
+						<li><input type="button" id="equality" value="=" class="orange"></li>
+					</ul>
 				</div>
 			</div>
 		</div>
