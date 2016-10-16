@@ -1,0 +1,71 @@
+body {
+	margin: 0px;
+	padding: 0px;
+	font-family: "Century Gothic",sans-serif;
+}
+h1, h2 {
+	text-align: center;
+	margin: 10px;
+}
+h3, p {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+#scoreBoard {
+	width: 490px;
+	height: 60px;
+	margin: 20px auto 20px auto;
+}
+#scoreBoard input, p {
+	display: inline-block;
+}
+#scoreBoard p {
+	margin: 0px;
+}
+#switch {
+	margin-right: 210px;
+	width: 164px;
+}
+#screen {
+	margin-right: 200px;
+	width: 160px;
+}
+#clock, #score {
+	width: 50px;
+}
+#main {
+	border-top: 2px black solid;
+	border-bottom: 2px black solid;
+	width: 400px;
+	height: 300px;
+	margin: 0px auto 0px auto;
+}
+.hole {
+	border-radius: 50%;
+	width: 20px;
+	height: 20px;
+	margin: 14px 9px 14px 9px;
+	border: 1px black solid;
+	background-color: rgba(0, 0, 0, 0.05);
+	box-shadow:-2px 2px 2px rgba(0, 0, 0, 0.2) inset;
+	box-shadow:2px 2px 2px rgba(0, 0, 0, 0.5); 
+	float: left;
+}
+.changed {
+	border-radius: 50%;
+	width: 12px;
+	height: 12px;
+	margin: 14px 9px 14px 9px;
+	border: 5px #3498db solid;
+	box-shadow: none;
+	float: left;
+}
+h3 {
+	margin-left: 170px;
+}
+#bottom p {
+	margin-left: 220px;
+}
+input[type = "text"] {
+	background-color: white;
+}

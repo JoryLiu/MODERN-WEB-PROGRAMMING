@@ -1,0 +1,144 @@
+body {
+	margin: 0px;
+	padding: 0px;
+	font-family: "Century Gothic",sans-serif;
+}
+h1, h2 {
+	text-align: center;
+	margin: 10px;
+}
+#screen {
+	height: 45px;
+}
+#maze {
+	width: 500px;
+	height: 300px;
+	margin-right: auto;
+	margin-left: auto;
+}
+#bottom {
+	width: 650px;
+	margin-left: auto;
+	margin-right: auto; 
+}
+.wall, .way, .button {
+	display: inline-block;
+	float: left;
+}
+.wall {
+	background-color: #eeeeee;
+}
+#bottomLeftWall {
+	width: 203px;
+	height: 50px;
+	border-left: black 2px solid;
+	border-bottom: black 2px solid;
+}
+#bottomMiddleWall {
+	width: 90px;
+	height: 50px;
+	border-bottom: black 2px solid;
+}
+#bottomRightWall {
+	width: 203px;
+	height: 50px;
+	border-right: black 2px solid;
+	border-bottom: black 2px solid;
+}
+#topLeftWall {
+	width: 150px;
+	height: 50px;
+	border-left: black 2px solid;
+}
+#topRightWall {
+	width: 150px;
+	height: 50px;
+	border-right: black 2px solid;
+}
+#topMiddleWall {
+	width: 196px;
+	height: 50px;
+}
+#topLeftWall, #topMiddleWall, #topRightWall {
+	border-top: black 2px solid;
+}
+#leftTopWall, #rightTopWall {
+	width: 150px;
+	height: 50px;
+	border-left: black 2px solid;
+	border-right: black 2px solid;
+}
+#rightWall, #leftWall {
+	width: 150px;
+	height: 100px;
+	border-left: black 2px solid;
+	border-right: black 2px solid;
+	border-bottom: black 2px solid;
+}
+#middleTopWall {
+	width: 88px;
+	height: 100px;
+	border-left: black 2px solid;
+	border-right: black 2px solid;
+	border-top: black 2px solid;
+}
+#middleBottomWall {
+	width: 88px;
+	height: 50px;
+	border-left: black 2px solid;
+	border-right: black 2px solid;
+}
+#topWay {
+	width: 192px;
+	height: 48px;
+	border-top: black 2px solid;
+}
+#leftWay, #rightWay {
+	width: 50px;
+	height: 100px;
+}
+#bottomLeftWay, #bottomRightWay {
+	width: 160px;
+	height: 48px;
+	border-bottom: black 2px solid;
+}
+.button {
+	width: 44px;
+	height: 48px;
+	border-bottom: black 2px solid;
+}
+#startButton, #endButton {
+	width: 40px;
+	height: 40px;
+	border: black 2px solid;
+	text-align: center;
+	line-height: 0px;
+	font-family: "Tahoma";
+	font-weight: bold;
+}
+#startButton {
+	background-color: #7fff7f;
+	margin: 2px 0px 2px 0px;
+	float: left;
+}
+#endButton {
+	background-color: #8583ff;
+	margin: 2px 0px 2px 0px;
+	float: right;
+}
+#example {
+	width: 100px;
+	height: 30px;
+	margin-left: auto;
+	margin-right: auto;
+	border: 2px black solid;
+	background-color: #eeeeee;
+}
+#bottom p {
+	margin: 15px 0px 15px 0px;
+}
+.changed {
+	background-color: red;
+	display: inline-block;
+	float: left;
+}
