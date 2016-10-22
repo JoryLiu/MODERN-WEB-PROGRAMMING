@@ -22,9 +22,8 @@ input[id = "clock"] {
 	margin-left: 8%;
 	font-family: "Century Gothic",sans-serif;
 	font-size: 20px;
-	color: rgba(15, 133, 135, 0.24);
+	color: rgb(96, 209, 210);
 	text-align: center;
-	font-weight: bold;
 	font-weight: bold;
 	border: none;
 	box-shadow:2px 2px 4px rgba(10, 10, 10, 0.32);
@@ -41,6 +40,7 @@ input[id = "clock"] {
 input[value = "Restart"] {
 	width: 80px;
 	height: 30px;
+	text-align: center;
 	font-family: "Century Gothic",sans-serif;
 	font-size: 20px;
 	color: white;
