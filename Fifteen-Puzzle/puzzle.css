@@ -49,6 +49,11 @@ input[value = "Restart"] {
 	border: none;
 	background-color: rgba(15, 133, 135, 0.24);
 	outline: none;
+	transition: all 0.5s ease-in-out 0.1s;
+}
+input[value = "Restart"]:hover {
+	transform: scale(1.1, 1.1);
+	transition: all 0.5s ease-in-out;
 }
 input[value = "Restart"]:active {
 	width: 80px;
@@ -78,6 +83,10 @@ input[value = "Restart"]:active {
 	display: inline-block;
 	position: absolute;
 	transition: 0.2s ease-in-out;
+}
+.picture:hover {
+	transform: scale(1.03, 1.03);
+	transition: all 0.3s ease-in-out;
 }
 .blank {
 	width: 123px;
