@@ -19,7 +19,7 @@ h1 {
 input[id = "clock"] {
 	width: 80px;
 	height: 28px;
-	margin-left: 2.5%;
+	margin-left: 8%;
 	font-family: "Century Gothic",sans-serif;
 	font-size: 20px;
 	color: rgba(15, 133, 135, 0.24);
@@ -32,7 +32,7 @@ input[id = "clock"] {
 	border-radius: 5%;
 }
 #screen {
-	width: 300px;
+	width: 250px;
 	display: inline-block;
 	text-align: center;
 	font-weight: bold;
