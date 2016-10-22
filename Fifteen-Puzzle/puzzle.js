@@ -1,3 +1,4 @@
+'use strict';
 var variable = ( function variableManager() {
 	var blankPosition = 3;
 	var pictures = [0, 1, 2, -1, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
@@ -59,7 +60,7 @@ function isFinished() {
 }
 
 function move(event) {
-	if (event.target.id == "blank" || variable.getSwitch() == 0) return;
+	if (event.target.id == "blank" || variable.getSwitch() === 0) return;
 	var target = event.target;
 	var currentPosition, i, j;
 	var blank = document.getElementById("blank");
@@ -84,7 +85,7 @@ function move(event) {
 		variable.setPicturePosition(i * 4 + j, currentPosition + 4);
 		target.className = "picture row" + (Math.floor(currentPosition / 4) + 1) + " column" + (currentPosition % 4);
 		variable.setblankPosition(currentPosition);
-	} else if (currentPosition % 4 != 0 && currentPosition - 1 == variable.getblankPosition()) {
+	} else if (currentPosition % 4 !== 0 && currentPosition - 1 == variable.getblankPosition()) {
 		blank.className = "blank row" + Math.floor(currentPosition / 4) + " column" + (currentPosition % 4);
 		variable.setPicturePosition(i * 4 + j, currentPosition - 1);
 		target.className = "picture row" + Math.floor(currentPosition / 4) + " column" + (currentPosition % 4 - 1);
@@ -103,12 +104,12 @@ function initialize() {
 	var i, j;
 	var picture, blank;
 	blank = document.createElement("div");
-	blank.className = "blank row0 column3"
+	blank.className = "blank row0 column3";
 	blank.id = "blank";
 	blank.addEventListener('click', move);
 	for (i = 0; i < 4; i++)
 		for (j = 0; j < 4; j++)
-			if (!(i == 0 && j == 3)) {
+			if (!(i === 0 && j == 3)) {
 				picture = document.createElement("div");
 				picture.className = "picture row" + i + " column" + j;
 				picture.id = "picture" + (4 * i + j);
@@ -138,7 +139,7 @@ function restart() {
 			variable.setblankPosition(blankPos + 3);
 			picturePos = variable.getPictureIndex(blankPos + 3);
 			variable.setPicturePosition(picturePos, blankPos);
-		} else if (operation == 3 && blankPos % 4 != 0) {
+		} else if (operation == 3 && blankPos % 4 !== 0) {
 			variable.setblankPosition(blankPos - 1);
 			picturePos = variable.getPictureIndex(blankPos - 1);
 			variable.setPicturePosition(picturePos, blankPos);
@@ -162,4 +163,4 @@ function restart() {
 window.onload = function() {
 	initialize();
 	document.getElementById("restart").onclick = restart;
-}
+};
