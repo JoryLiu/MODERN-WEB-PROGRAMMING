@@ -157,7 +157,7 @@ function restart() {
 		}
 	}
 	blankPos = variable.getblankPosition();
-	document.getElementById("blank").className = "blank row" + Math.floor(blankPos / 4) + " column" + Math.floor(blankPos / 4);
+	document.getElementById("blank").className = "blank row" + Math.floor(blankPos / 4) + " column" + Math.floor(blankPos % 4);
 }
 
 window.onload = function() {
