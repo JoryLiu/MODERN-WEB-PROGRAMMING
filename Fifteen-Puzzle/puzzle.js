@@ -1,4 +1,3 @@
-'use strict';
 var variable = ( function variableManager() {
 	var blankPosition = 3;
 	var pictures = [0, 1, 2, -1, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
@@ -153,11 +152,11 @@ function restart() {
 		if (i != 3) {
 			picturePos = variable.getPicturePosition(i);
 			picture = document.getElementById("picture" + i);
-			picture.className = "picture row" + Math.floor(picturePos / 4) + " column" + Math.floor(picturePos % 4);
+			picture.className = "picture row" + Math.floor(picturePos / 4) + " column" + (picturePos % 4);
 		}
 	}
 	blankPos = variable.getblankPosition();
-	document.getElementById("blank").className = "blank row" + Math.floor(blankPos / 4) + " column" + Math.floor(blankPos % 4);
+	document.getElementById("blank").className = "blank row" + Math.floor(blankPos / 4) + " column" + (blankPos % 4);
 }
 
 window.onload = function() {
