@@ -29,7 +29,7 @@
 		clear(tar);
 		_.chain($(tar.parents("table")).children("tbody").children("tr"))
 			.sortBy(tr=>$(tr).children("td:nth-child(" + (tar.index()+1) + ")").text())
-			.thru(array=>tar.hasClass("ascend")?reverse(array):array)
+			.thru(array=>tar.hasAttribute("ascend")?reverse(array):array)
 			.forEach(tr=>$(tar.parents("table")).children("tbody").append($(tr)))
 			.value();
 		mark(event.target);
@@ -37,9 +37,8 @@
 
 	function clear(tar) {
 		tar.siblings().each(function() {
-			tar.removeClass("ascend");
-			tar.removeClass("descend");
-			tar.removeClass("selected");
+			tar.removeAttribute("ascend");
+			tar.removeAttribute("descend");
 		})
 	}
 
@@ -53,13 +52,12 @@
 	};
 
 	function mark(tar) {
-		if (!tar.hasClass("selected")) tar.addClass("selected");
-		if (tar.hasClass("ascend")) {
-			tar.removeClass("ascend");
-			tar.addClass("descend");
+		if (tar.hasAttribute("ascend")) {
+			tar.removeAttribute("ascend");
+			tar.addAttribute("descend");
 		} else {
-			tar.removeClass("descend");
-			tar.addClass("ascend");
+			tar.removeAttribute("descend");
+			tar.addAttribute("ascend");
 		}
 	}
 
