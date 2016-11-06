@@ -29,7 +29,7 @@
 		clear(tar);
 		_.chain($(tar.parents("table")).children("tbody").children("tr"))
 			.sortBy(tr=>$(tr).children("td:nth-child(" + (tar.index()+1) + ")").text())
-			.thru(array=>event.target.className === "selected ascend"?reverse(array):array)
+			.thru(array=>tar.hasClass("ascend")?reverse(array):array)
 			.forEach(tr=>$(tar.parents("table")).children("tbody").append($(tr)))
 			.value();
 		mark(event.target);
