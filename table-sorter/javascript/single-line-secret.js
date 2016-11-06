@@ -29,7 +29,7 @@
 		clear(tar);
 		_.chain($(tar.parents("table")).children("tbody").children("tr"))
 			.sortBy(tr=>$(tr).children("td:nth-child(" + (tar.index()+1) + ")").text())
-			.thru(array=>tar.hasAttribute("ascend")?reverse(array):array)
+			.thru(array=>tar.hasAttr("ascend")?reverse(array):array)
 			.forEach(tr=>$(tar.parents("table")).children("tbody").append($(tr)))
 			.value();
 		mark(event.target);
@@ -37,8 +37,8 @@
 
 	function clear(tar) {
 		tar.siblings().each(function() {
-			tar.removeAttribute("ascend");
-			tar.removeAttribute("descend");
+			tar.removeAttr("ascend");
+			tar.removeAttr("descend");
 		})
 	}
 
@@ -52,12 +52,12 @@
 	};
 
 	function mark(tar) {
-		if (tar.hasAttribute("ascend")) {
-			tar.removeAttribute("ascend");
-			tar.addAttribute("descend");
+		if (tar.hasAttr("ascend")) {
+			tar.removeAttr("ascend");
+			tar.attr("descend");
 		} else {
-			tar.removeAttribute("descend");
-			tar.addAttribute("ascend");
+			tar.removeAttr("descend");
+			tar.attr("ascend");
 		}
 	}
 
