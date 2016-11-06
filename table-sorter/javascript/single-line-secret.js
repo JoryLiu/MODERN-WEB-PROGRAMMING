@@ -37,7 +37,7 @@
 	}
 
 	function reverse (array) {
-    	for (var i = 0, j = array.length; i < j; i++, j--) {
+    	for (var i = 0, j = array.length - 1; i < j; i++, j--) {
         	var temp = array[i];
         	array[i] = array[j];
         	array[j] = temp;
