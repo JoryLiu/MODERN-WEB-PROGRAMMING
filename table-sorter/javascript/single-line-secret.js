@@ -33,7 +33,7 @@
 			.thru(array=>sequence == 1?reverse(array):array)
 			.forEach(tr=>$(tar.parents("table")).children("tbody").append($(tr)))
 			.value();
-		mark(tar);
+		mark();
 	}
 
 	function reverse (array) {
@@ -45,7 +45,7 @@
     	return array;
 	};
 
-	function mark(tar) {
+	function mark() {
 		if (sequence == 1)
 			sequence = -1;
 		else sequence = 1;

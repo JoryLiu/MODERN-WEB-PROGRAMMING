@@ -10,6 +10,7 @@
 			.sortBy(tr=>$(tr).children("td:nth-child(" + (tar.index()+1) + ")").text())
 			.thru(array=>event.target.className === "selected ascend"?reverse(array):array)
 			.forEach(tr=>$(tar.parents("table")).children("tbody").append($(tr)))
+			.forEach(tr=>$(tr).index() == 1?$(tr).addClass("alternate"):$(tr).removeClass("alternate"))
 			.value();
 		mark(event.target);
 	}
