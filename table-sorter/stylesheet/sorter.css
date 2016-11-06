@@ -1,0 +1,42 @@
+body{
+	font-family: "Arial","Microsoft YaHei",sans-serif;
+	width: 600px;
+	height: 500px;
+	border: 1px #c4c8ce solid;
+	box-shadow:5px 5px 25px rgba(10, 10, 10, 0.42);
+	padding: 10px;
+}
+h1, h2 {
+	font-family: "Times New Roman";
+}
+table {
+	border: 2px #c4c8ce solid;
+	border-collapse: collapse;
+}
+th {
+	background-color: #021a7d;
+	color: white;
+	text-align: left;
+}
+th:hover {
+	cursor: pointer;
+}
+.selected {
+	background-color: #a3affc;
+	color: white;
+	text-align: left;
+}
+.ascend {
+	background-image: url("../images/ascend.png");
+	background-repeat: no-repeat;
+	background-position: 95% 50%;
+}
+.descend {
+	background-image: url("../images/descend.png");
+	background-repeat: no-repeat;
+	background-position: 95% 50%;
+}
+th, td {
+	border: 1px #c4c8ce solid;
+	padding: 0px 25px 0px 5px;
+}
