@@ -7,7 +7,7 @@
 
 	function addScript() {
 		var _jquery = document.createElement("script");
-		_jquery.setAttribute("src","https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.js");
+		_jquery.setAttribute("src","https://code.jquery.com/jquery-3.1.1.min.js");
 		_jquery.setAttribute("type", "text/javascript");
 		var _lodash = document.createElement("script");
 		_lodash.setAttribute("src","https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.js");
@@ -21,7 +21,7 @@
 		_stylesheet.setAttribute("rel", "stylesheet");
 		_stylesheet.setAttribute("type", "text/css");
 		_stylesheet.setAttribute("href", "https://joryliu.github.io/MODERN-WEB-PROGRAMMING/table-sorter/stylesheet/single-line-secret.css");
-
+		document.head.appendChild(_stylesheet);
 	}
 
 	function sort(event) {
