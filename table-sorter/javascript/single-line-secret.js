@@ -20,7 +20,7 @@
 		var _stylesheet = document.createElement("link");
 		_stylesheet.setAttribute("rel", "stylesheet");
 		_stylesheet.setAttribute("type", "text/css");
-		_stylesheet.setAttribute("href", "https://joryliu.github.io/MODERN-WEB-PROGRAMMING/table-sorter/single-line-secret.css");
+		_stylesheet.setAttribute("href", "https://joryliu.github.io/MODERN-WEB-PROGRAMMING/table-sorter/stylesheet/single-line-secret.css");
 
 	}
 
