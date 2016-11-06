@@ -1,7 +1,4 @@
 (function() {
-	loadScript("https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.js", "jquery");
-    loadScript("https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.js", "lodash");
-
 	$(document).ready(function() {
 		$("th").click(sort);
 	});
