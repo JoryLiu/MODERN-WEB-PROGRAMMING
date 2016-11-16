@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang = "en">
+	<head>
+    	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    	<title>Sign Up</title>
+    	<link rel="stylesheet" type="text/css" href="stylesheet/signUp.css" />
+    	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+		<script type="text/javascript" src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
+		<script type="text/javascript" src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/localization/messages_zh.js"></script>
+    	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.16.6/lodash.js"></script>
+    	<script type="text/javascript" src="javascript/signUp.js"></script>
+	</head>
+	<body>
+		<div id = "signup-background">
+			<div id = "formArea">
+				<form action = "/logIn" method = "post">
+					<fieldset>
+						<h2>Registration</h2>
+						<div class = "inputUnit">
+							<p>
+								<label for = "name">Name</label>
+								<input name = "name" id = "name" type = "text">
+								<div class = "errorNotice"></div>
+							</p>
+						</div>
+						<div class = "inputUnit">
+							<p>
+								<label for = "id">Student ID</label>
+								<input name = "id" id = "id" type = "text">
+								<div class = "errorNotice"></div>
+							</p>
+						</div>
+						<div class = "inputUnit">
+							<p>
+								<label for = "email">Email</label>
+								<input name = "email" id = "email" type = "text">
+								<div class = "errorNotice"></div>
+							</p>
+						</div>
+						<div class = "inputUnit">
+							<p>
+								<label for "phone">Cell Phone</label>
+								<input name = "phone" id = "phone" type = "text">
+								<div class = "errorNotice"></div>
+							</p>
+						</div>
+					</fieldset>
+					<div id = "button">
+						<input value = "Regist" id = "register" type = "submit">
+						<input value = "Reset" id = "reset" type = "button">
+					</div>
+				</form>
+			</div>
+		</div>
+	</body>
