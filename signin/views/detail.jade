@@ -1,0 +1,17 @@
+extends layout
+
+block content
+    h1 User Information
+
+    p Username
+        span #{user.name}
+
+    p StudentID
+        span #{user.id}
+        
+    p Cellphone
+        span #{user.phone}
+        
+    p Email
+        span #{user.email}
+    a.signinToSignup(href='/signout') Log out

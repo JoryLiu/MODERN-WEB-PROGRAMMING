@@ -1,0 +1,43 @@
+extends layout
+
+block content
+    div#signup-background
+        div#formArea
+            form(id = 'signup' method = 'post')
+                if error
+                    div.error.server #{error}
+                fieldset
+                    h2 Registration
+                    div.inputUnit
+                        label(for = 'username') Name
+                        input(type = 'text' id = 'name', name = 'name' value = user.name)
+                        div.errorNotice
+                    div.inputUnit
+                        label(for = 'password') Password
+                        input(type = 'password' id = 'password', name = 'password' value = user.password)
+                        div.errorNotice
+                    div.inputUnit
+                        label(for = 'repeatPassword') Repeat Password
+                        input(type = 'password' id = 'repeatPassword', name = 'repeatPassword' value = user.password)
+                        div.errorNotice
+                    div.inputUnit
+                        label(for = 'id') Student ID
+                        input(type = 'text' id = 'id', name = 'id' value = user.id)
+                        div.errorNotice
+                    div.inputUnit
+                        label(for = 'email') Email
+                        input(type = 'text' id = 'email', name = 'email' value = user.email)
+                        div.errorNotice
+                    div.inputUnit
+                        label(for = 'phone') Cell phone
+                        input(type = 'text' id = 'phone', name = 'phone' value = user.phone)
+                        div.errorNotice
+
+                div#button
+                    input.button.reset(type = 'reset' value = 'Reset')
+                    input.button.submit(type = 'submit' value = 'Submit')
+                    a.signinToSignup(href='/signIn') Alredy have an account? Sign in
+    script(type = 'text/javascript' src = 'http://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js')
+    script(type = 'text/javascript' src = 'http://static.runoob.com/assets/jquery-validation-1.14.0/dist/localization/messages_zh.js')
+    script(type = 'text/javascript' src = '/javascripts/signUp.js')
+    link(rel='stylesheet', href='/stylesheets/signUp.css')

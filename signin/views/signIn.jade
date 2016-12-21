@@ -1,0 +1,26 @@
+extends layout
+
+block content
+    div#signup-background
+        div#formArea
+            form(id = 'signin' method = 'post')
+                fieldset
+                    h2 Log In
+                    div.inputUnit
+                        label(for = 'username') Name
+                        input(type = 'text' id = 'name', name = 'name')
+                        if error == "There's no such user"
+                            div.errorNotice #{error}
+                    div.inputUnit
+                        label(for = 'password') Password
+                        input(type = 'password' id = 'password', name = 'password')
+                        if error == "wrong password"
+                            div.errorNotice #{error}
+
+                div#button
+                    input.button.reset(type = 'reset' value = 'Reset')
+                    input.button.submit(type = 'submit' value = 'Sign in')
+                    a.signinToSignup(href='/signup') Have no account? Register one
+    script(type = 'text/javascript' src = 'http://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js')
+    script(type = 'text/javascript' src = 'http://static.runoob.com/assets/jquery-validation-1.14.0/dist/localization/messages_zh.js')
+    link(rel='stylesheet', href='/stylesheets/signIn.css')
