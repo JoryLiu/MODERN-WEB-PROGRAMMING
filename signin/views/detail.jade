@@ -1,17 +1,23 @@
 extends layout
 
 block content
-    h1 User Information
+    div#signup-background
+        div#formArea
+            fieldset
+                h2 User Information
 
-    p Username
-        span #{user.name}
+                p Username:
+                    span #{user.name}
 
-    p StudentID
-        span #{user.id}
-        
-    p Cellphone
-        span #{user.phone}
-        
-    p Email
-        span #{user.email}
-    a.signinToSignup(href='/signout') Log out
+                p StudentID:
+                    span #{user.id}
+                    
+                p Cellphone:
+                    span #{user.phone}
+                    
+                p Email:
+                    span #{user.email}
+
+        div#foot
+            a.signinToSignup(href='/signout') Log out
+    link(rel='stylesheet', href='/stylesheets/detail.css')
