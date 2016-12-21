@@ -3,6 +3,8 @@ extends layout
 block content
     div#signup-background
         div#formArea
+            if error
+                    div.error.server #{error}
             fieldset
                 h2 User Information
 

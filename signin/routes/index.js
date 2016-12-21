@@ -1,6 +1,8 @@
 var express = require('express');
 var router = express.Router();
 var debug = require('debug')('signin:index');
+var url=require('url');
+var queryString=require('querystring');
 
 module.exports = function (db) {
 
@@ -11,18 +13,20 @@ module.exports = function (db) {
 
   /* GET detail page. */
   router.get('/detail', function (req, res, next) {
-    if (req.session.user)
-      res.render('detail', { title: 'User Information', user: req.session.user });
+    if (req.session.user) {
+      if (req.query.err) var err = 'You can only see your information';
+      res.render('detail', { title: 'User Information', user: req.session.user, error: err });
+    }
     else
       res.redirect('/signIn');
   });
 
   /* GET sign up page. */
-  router.get('/signUp', function (req, res, next) {
+  router.get('/regist', function (req, res, next) {
     res.render('signUp', { title: 'Sign Up', user: {} });
   });
 
-  router.post('/signUp', function (req, res, next) {
+  router.post('/regist', function (req, res, next) {
     var user = req.body;
     userManager.checkUser(user)
       .then(userManager.createUser)
@@ -59,7 +63,9 @@ module.exports = function (db) {
   });
 
   router.all('*', function (req, res, next) {
-    req.session.user ? next() : res.redirect('/signIn');
+    var query = queryString.parse(url.parse(req.url).query);
+    if (query['username']) res.redirect('/detail?err=true');
+    req.session.user ? res.redirect('/detail') : res.redirect('/signIn');
   });
 
   return router;
