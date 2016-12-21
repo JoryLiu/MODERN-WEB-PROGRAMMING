@@ -26,6 +26,16 @@ var validator = {
         }
     },
 
+    findFormatErrors: function (user) {
+        var errorMessages = [];
+        for (var key in user) {
+            if (user[key] != undefined) {
+                if (!validator.isFieldValid(key, user[key])) errorMessages.push(validator.form[key].errorMessage);
+            }
+        }
+        errorMessages.length > 0 ? new Error(errorMessages.join('<br />')) : null;
+    },
+
     isNameValid: function (name) {
         return this.form.name.status = /^[a-zA-Z][a-zA-Z0-9_]{5,17}$/.test(name);
     },
@@ -51,20 +61,20 @@ var validator = {
         return this.form.phone.status = /^[1-9][0-9]{10,10}$/.test(phone);
     },
 
-    isFieldValid: function(fieldname, value){
+    isFieldValid: function (fieldname, value) {
         var CapFiledname = fieldname[0].toUpperCase() + fieldname.slice(1, fieldname.length);
         return this["is" + CapFiledname + 'Valid'](value);
     },
 
-    isFormValid: function() {
+    isFormValid: function () {
         return this.form.name.status && this.form.password.status && this.form.repeatPassword.status && this.form.id.status && this.form.email.status && this.form.phone.status;
     },
 
-    getErrorMessage: function(fieldname) {
+    getErrorMessage: function (fieldname) {
         return this.form[fieldname].errorMessage;
     },
 
-    isAttrValueUnique: function(registry, user, attr) {
+    isAttrValueUnique: function (registry, user, attr) {
         for (var key in registry) {
             if (registry[key] != undefined && registry[key][attr] == user[attr]) return false;
         }
